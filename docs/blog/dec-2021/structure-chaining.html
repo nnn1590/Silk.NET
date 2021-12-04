@@ -7,18 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   
       <title>
-        SilkTouch: Slots &amp; VTables - Silk.NET
+        Silk.NET Structure Chaining - Silk.NET
       </title>
-      <meta property="og:title" content="SilkTouch: Slots &amp; VTables" />
+      <meta property="og:title" content="Silk.NET Structure Chaining" />
       <meta property="og:site_name" content="Silk.NET - High-Speed &amp; Advanced .NET Graphics &amp; Compute" />
 
-          <meta name="description" content="Please read the previous blog post, which introduces SilkTouch and it&#x27;s core features Invokes &amp;amp; Marshalling." />
+          <meta name="description" content="With the release of Silk.NET 2.11 we&#x27;ve enhanced the usability of Silk.NET.Vulkan by addressing one of its pain&#xA;points, specifically building the Singly Linked Lists (or chains) of&#xA;structures that are frequently used to pass information to, and from, the API." />
 
       <meta property="og:type" content="article" />
 
-      <meta name="og:image" content="https://dotnet.github.io/Silk.NET/images/logo64.png" />
-      <meta name="og:image:alt" content="Silk.NET Logo" />
-      <meta name="twitter:card" content="summary" />
+      <meta name="og:image" content="https://dotnet.github.io/Silk.NET/images/blog/dec-2021/structure-chaining.png" />
+      <meta name="og:image:alt" content="Blog Preview Image" />
+      <meta name="twitter:card" content="summary_large_image" />
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <link href="../../theme/nucleo.css" rel="stylesheet" />
@@ -155,8 +155,8 @@
                             Blog
                         </a>
                     <ul class="nav ct-sidenav">
-                                <li>
-                                    <a href="../dec-2021/structure-chaining.html">
+                                <li class="active ct-sidenav-active">
+                                    <a href="structure-chaining.html">
                                         Silk.NET Structure Chaining
                                     </a>
                                 </li>
@@ -190,18 +190,18 @@
                                         Go live with Silk.NET 2.0 Preview 4
                                     </a>
                                 </li>
-                                <li class="active ct-sidenav-active">
-                                    <a href="silktouch-slots-vtables.html">
+                                <li>
+                                    <a href="../nov-2020/silktouch-slots-vtables.html">
                                         SilkTouch: Slots &amp; VTables
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="silktouch-invokes-marshalling.html">
+                                    <a href="../nov-2020/silktouch-invokes-marshalling.html">
                                         SilkTouch: Invokes &amp; Marshalling
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="silk20pre3.html">
+                                    <a href="../nov-2020/silk20pre3.html">
                                         Announcing Silk.NET 2.0 Preview 3
                                     </a>
                                 </li>
@@ -213,7 +213,7 @@
         
         <!-- Content Navigation-->
         <div class="d-none d-xl-block col-xl-2 ct-toc">
-            <ul class="section-nav"><li class="toc-entry toc-h1"><a href="#silktouch--slots--amp--vtables">SilkTouch: Slots &amp; VTables</a></li><ul><li class="toc-entry toc-h2"><a href="#vtables">VTables</a></li><li class="toc-entry toc-h2"><a href="#concurrentdictionaryvtable">ConcurrentDictionaryVTable</a></li><li class="toc-entry toc-h2"><a href="#how-silktouch-does-it">How SilkTouch does it</a></li><li class="toc-entry toc-h2"><a href="#making-jit-inline">Making JIT inline</a></li><li class="toc-entry toc-h2"><a href="#aot--ahead-of-time-compilation">AOT (Ahead of Time Compilation)</a></li><li class="toc-entry toc-h2"><a href="#addendum--overrides">Addendum: Overrides</a></li></ul></ul>
+            <ul class="section-nav"><li class="toc-entry toc-h1"><a href="#silk-net-structure-chaining">Silk.NET Structure Chaining</a></li></ul>
         </div>
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 silk-content silk-blog" role="main">
@@ -222,7 +222,7 @@
                             <li class="breadcrumb-item"><a href="../..">Home</a></li>
                             <li class="breadcrumb-item"><a href="..">Blog</a></li>
 
-                        <li class="breadcrumb-item active" aria-current="page">SilkTouch: Slots &amp; VTables</li>
+                        <li class="breadcrumb-item active" aria-current="page">Silk.NET Structure Chaining</li>
                         <li class="ml-auto silk-sidebar-activator"><a data-toggle="collapse" href="#ct-docs-nav" role="button" aria-expanded="false" aria-controls="ct-docs-nav"><i class="fa fa-bars"></i></a></li>
                     </ol>
                 </nav>
@@ -235,53 +235,52 @@
         This site is a work in progress!
     </div>
 
-<h1 id="silktouch--slots--amp--vtables">SilkTouch: Slots &amp; VTables</h1>
-<p>Please read <a href="../silktouch-invokes-marshalling.html">the previous blog post</a>, which introduces SilkTouch and it's core features Invokes &amp; Marshalling.</p>
-<p>This time, we are going to talk about this little yet essential part of SilkTouch and Silk.NET as a whole. We ignored this last time for simplicity. <code>(CurrentVTable as GeneratedVTable).Load(721, &quot;glGetDebugMessageLog&quot;)</code>.
-The quick break down is this, first, we cast <code>CurrentVTable to GeneratedVTable</code> to allow inlining, because it isn't a virtual call anymore (<code>GeneratedVTable</code> is a private sealed class).
-Then, besides the native name, we pass a slot to the <code>Load</code> method.</p>
-<h2 id="vtables">VTables</h2>
-<p>A VTable is basically a &quot;tiny&quot; abstraction around <code>INativeContext</code> it's defined as:</p>
-<pre><code class="language-cs">public interface IVTable : IDisposable
+<h1 id="silk-net-structure-chaining">Silk.NET Structure Chaining</h1>
+<p>With the release of Silk.NET 2.11 we've enhanced the usability of <code>Silk.NET.Vulkan</code> by addressing one of its pain
+points, specifically building the <a href="https://en.wikipedia.org/wiki/Linked_list">Singly Linked Lists</a> (or chains) of
+structures that are frequently used to pass information to, and from, the API.</p>
+<p>Up until now, it was not unusual to have to write quite a lot of unsafe code to work with the Vulkan API. For example, to
+query device features you would need to create a chain of empty structures to be populated by the API:</p>
+<pre><code class="language-csharp">var accelerationStructureFeaturesKhr = new PhysicalDeviceAccelerationStructureFeaturesKHR
+    {SType = StructureType.PhysicalDeviceAccelerationStructureFeaturesKhr};
+var indexingFeatures = new PhysicalDeviceDescriptorIndexingFeatures
 {
-    void Initialize(INativeContext ctx, int maxSlots);
-    IntPtr Load(int slot, string entryPoint);
-    void Purge();
-}
-</code></pre>
-<p>Pretty simple, right?
-You may wonder what <code>INativeContext</code> is, if you are unfamiliar with Silk.NET.Core it's designed as</p>
-<pre><code class="language-cs">public interface INativeContext : IDisposable
+    SType = StructureType.PhysicalDeviceDescriptorIndexingFeatures,
+    PNext = &amp;accelerationStructureFeaturesKhr
+};
+var features2 = new PhysicalDeviceFeatures2
 {
-    IntPtr GetProcAddress(string proc, int? slot = default);
-}
+    SType = StructureType.PhysicalDeviceFeatures2,
+    PNext = &amp;indexingFeatures
+};
+vk.GetPhysicalDeviceFeatures2(device, &amp;features2);
 </code></pre>
-<p>And is implemented by GLFW / SDL and some default / composite types, and provides platform specific information on loading native symbols. It also powers overrides (see addendum)</p>
-<p>Note that <code>INativeContext</code> does not cache anything, it's asked to always call directly down to whatever loading mechanism it wraps. This is where <code>IVTable</code> comes in.</p>
-<h2 id="concurrentdictionaryvtable">ConcurrentDictionaryVTable</h2>
-<p>The &quot;default&quot; <code>IVTable</code> we used was <code>ConcurrentDictionaryVTable</code>, and while it's still there, we don't use it anymore. We only use the generated VTables from SilkTouch. But it still serves as a good example of the basic functionality here.</p>
-<p>So, let's go back to our interface. First of all, we know we have to store the <code>INativeContext</code> somewhere, to later load from, then, we can already know the maximum amount of unique slots we are every going to be queried for, and while it's not necessary, we can put that in as the maximum capacity of our <code>ConcurrentDictionary</code> now, I think it's obvious by now that the key of that dictionary is going to be an <code>int</code> (a slot), and maybe that the value is going to be <code>IntPtr</code> (the address we get back from <code>INativeContext.GetProcAddress</code>).</p>
-<p>Next, the <code>Load</code> method, it's pretty simple, we just use the <code>GetOrAdd</code> method on our dictionary to either the the existing address, or load it from the <code>INativeContext</code> and then store it into the dictionary.</p>
-<p>Last and also least important, <code>Purge</code>. First of all, <code>Purge</code> does not reset the Initialize params, the <code>INativeContext</code> and the number of slots stays the same! So in this implementation, it's just using <code>Clear()</code>.</p>
-<h2 id="how-silktouch-does-it">How SilkTouch does it</h2>
-<p>Now SilkTouch knows a lot more about the slots. Basically it's just a compile-time Dictionary. In a nutshell, we generate one field per <code>entrypoint</code> and use the <code>slot</code> to find the appropriate field. <code>Purge</code> is just Zeroing all those fields, and <code>Initialize</code> just stores the <code>_ctx</code>.</p>
-<p>This allows the whole lookup to be inlined, which allows maximum performance. Now, at first you'd think this will result in just one huuuuge Load function, lot's of <code>if (slot == x) return _...;</code> now, that was much first approach to, I've then quickly learned that JIT does not care how hard you tell it to aggressively inline and optimize, it refuses to inline.</p>
-<h2 id="making-jit-inline">Making JIT inline</h2>
-<p>Now, it's pretty simple, it's like a binary search, we just sort all the slots, and generate for that section of slots (at the beginning these are all the slots). We then look whether the section of slots is an odd amount of slots, if it is, we load the lowest removing it from the slot section. As a fallback, we put an unreachable throw helper + <code>return default</code>.</p>
-<p>Then, we take the mid slot and split again and we do that over and over and over again, recursively. This may be a bit of a surprise, but that means the JIT is happy to inline the whole thing.Loading, in this case means checking whether the field that was found is <code>IntPtr.Zero</code> and if it is, call <code>_ctx.Load</code> otherwise, just return it.</p>
-<h2 id="aot--ahead-of-time-compilation">AOT (Ahead of Time Compilation)</h2>
-<p>I've recently added support for AOT into Silk.NET, and with it came the idea to add a feature to SilkTouch, preloading. Basically, what it does, it gets rid of all those branches in the loading, and preloads all addresses when <code>Initialize</code> is called. This means that <code>Load</code> call to the <code>IVTable</code> is as good as it gets. Right now we use the <code>Cdecl</code> calling convention in all cases, but that's not hard coded into SilkTouch, it's configurable per-method, this does mean some overhead. Also, every call we have a GC transition, but again, not much we can do about that. in the middle of the cdecl clutter and the GC entry/exit is our amazing <code>call rax</code> which, to my knowledge is the best we can do right now. (If you know any way to improve this please contact me)</p>
-<p>Well yeah and that's kind of it. Thanks again, and if you're interested, I encourage you to look at the source yourself, see <a href="https://github.com/dotnet/Silk.NET/blob/v2.0.0/src/Core/Silk.NET.SilkTouch/VTableGeneration.cs">https://github.com/dotnet/Silk.NET/blob/v2.0.0/src/Core/Silk.NET.SilkTouch/VTableGeneration.cs</a></p>
-<hr>
-<h2 id="addendum--overrides">Addendum: Overrides</h2>
-<p>So overrides are the solution to conditionally changing the <code>INativeContext</code> in some cases.</p>
-<p>On some platforms, specifically iOS, it's required to statically link the entire application, so trying to load functions from &quot;glfw3.dll&quot; won't work, since it's linked into the application itself, which can only be circumvented using <code>__Internal</code> which can only be used from P/Invoke.
-So we had to go back to using P/Invoke.</p>
-<p>We didn't want to rely on P/Invoke marshalling, so all P/Invoke signatures are what you would expect to find in the invoke function pointer, the native types, names, etc.
-Now, to override this, but only sometimes, SilkTouch generates an override, which is then put into a function <code>CreateDefaultContext</code>. It just compares a parameter with the condition given in the attribute, and then either creates one of the overrides, and then returns either the override, or the default context.
-In the generated override, we just put all the P/Invoke definitions, and then a binary tree similar to the one used in VTables, returning the pointer to the correct P/Invoke definition.</p>
-<p>And that's it, it's pretty short, but there's not much to it. Once again, check out the relevant code <a href="https://github.com/dotnet/Silk.NET/blob/v2.0.0/src/Core/Silk.NET.SilkTouch/NativeContextOverrides/PInvokeNativeContextOverride.cs">https://github.com/dotnet/Silk.NET/blob/v2.0.0/src/Core/Silk.NET.SilkTouch/NativeContextOverrides/PInvokeNativeContextOverride.cs</a>
-You'll kind of get to see this running if you get the iOS or Android demo (included in preview3) running, which both use the P/Invoke override (the latter due to loading bugs). iOS (and Android) support is still pretty experimental, so not yet full glory :)</p>
+<p>Not only is this quite a bit of boiler plate (and it gets worse when you actually want to pass data to the API), it is
+really easy for developers, who are not always comfortable with <code>unsafe</code> code, memory management and pointers, to
+introduce subtle bugs by passing in pointers to structures they have previously generated and are now residing on the
+.NET heap. Such structures can be moved by the Garbage Collector at the most unexpected times!</p>
+<p>Thanks to Structure Chaining, we now have 2 new ways to write the above code. The most
+useful <a href="https://github.com/dotnet/Silk.NET/blob/main/documentation/structure-chaining/managed-chaining.md">Managed Chaining</a>,
+makes it much easier, <em>and safer</em>, to work with Vulkan Structure Chains. For example, the above code can now be written
+as:</p>
+<pre><code class="language-csharp">using var features2 = Chain.Create&lt;PhysicalDeviceFeatures2, PhysicalDeviceDescriptorIndexingFeatures,
+    PhysicalDeviceAccelerationStructureFeaturesKHR&gt;();
+vk.GetPhysicalDeviceFeatures2(device, features2);
+</code></pre>
+<p>The new <code>Chain</code> classes manage the lifetime of the structures for you and they can be safely stored on the
+heap, like any object. They also efficiently handle the <code>SType</code> and <code>PNext</code> fields, ensuring they are always correct. It is
+also easy to modify and manipulate the chains. What is less obvious from the above example is that we are now able to
+validate that <code>PhysicalDeviceFeatures2</code> can be used as the <em>start</em> of a chain, and that
+both <code>PhysicalDeviceDescriptorIndexingFeatures</code> and <code>PhysicalDeviceAccelerationStructureFeaturesKHR</code> are valid
+structures to appear in such a chain. That validation occurs at compile time, meaning that most modern IDEs will give
+you error 'squiggles' as soon as you try and use an invalid structure (according to the Vulkan Specification)!</p>
+<p>That 'magic' is possible due to a set of new interfaces we've added to Vulkan Structures to indicate when they can be
+used in chains, and, when the Vulkan Specification explicitly states it, what chains they can be used in. All without
+effecting runtime performance.</p>
+<p>Full documentation is
+available <a href="https://github.com/dotnet/Silk.NET/blob/main/documentation/structure-chaining/overview.md">here</a>, and we
+can't wait for you to start using the new features!  If they prove popular, we plan on expanding the functionality to
+other APIs supported by Silk.NET.</p>
 
 
     <hr class="silk-last-hr">

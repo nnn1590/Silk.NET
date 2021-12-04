@@ -7,7 +7,7 @@
 	</author>
 	<link rel="self" href="/" />
 	<rights>Copyright (C) 2021 .NET Foundation and Contributors</rights>
-	<updated>2021-12-04T20:43:13Z</updated>
+	<updated>2021-12-04T21:42:52Z</updated>
 	<entry>
 		<id>/blog/nov-2020/silktouch-slots-vtables</id>
 		<title>SilkTouch: Slots &amp; VTables</title>
@@ -170,6 +170,11 @@
                             Blog
                         &lt;/a&gt;
                     &lt;ul class="nav ct-sidenav"&gt;
+                                &lt;li&gt;
+                                    &lt;a href="/dec-2021/structure-chaining"&gt;
+                                        Silk.NET Structure Chaining
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
                                 &lt;li&gt;
                                     &lt;a href="/nov-2021/xamarin-deprecation"&gt;
                                         Silk.NET, .NET 6, and the Sunsetting of Xamarin Support
@@ -493,6 +498,11 @@ You'll kind of get to see this running if you get the iOS or Android demo (inclu
                         &lt;/a&gt;
                     &lt;ul class="nav ct-sidenav"&gt;
                                 &lt;li&gt;
+                                    &lt;a href="/dec-2021/structure-chaining"&gt;
+                                        Silk.NET Structure Chaining
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
                                     &lt;a href="/nov-2021/xamarin-deprecation"&gt;
                                         Silk.NET, .NET 6, and the Sunsetting of Xamarin Support
                                     &lt;/a&gt;
@@ -805,6 +815,11 @@ GlfwInput.RegisterPlatform();
                             Blog
                         &lt;/a&gt;
                     &lt;ul class="nav ct-sidenav"&gt;
+                                &lt;li&gt;
+                                    &lt;a href="/dec-2021/structure-chaining"&gt;
+                                        Silk.NET Structure Chaining
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
                                 &lt;li&gt;
                                     &lt;a href="/nov-2021/xamarin-deprecation"&gt;
                                         Silk.NET, .NET 6, and the Sunsetting of Xamarin Support
@@ -1159,6 +1174,11 @@ Onwards in another Blog Post, about Slots &amp;amp; VTables (the bit we ignored 
                         &lt;/a&gt;
                     &lt;ul class="nav ct-sidenav"&gt;
                                 &lt;li&gt;
+                                    &lt;a href="/dec-2021/structure-chaining"&gt;
+                                        Silk.NET Structure Chaining
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
                                     &lt;a href="/nov-2021/xamarin-deprecation"&gt;
                                         Silk.NET, .NET 6, and the Sunsetting of Xamarin Support
                                     &lt;/a&gt;
@@ -1460,6 +1480,11 @@ Onwards in another Blog Post, about Slots &amp;amp; VTables (the bit we ignored 
                             Blog
                         &lt;/a&gt;
                     &lt;ul class="nav ct-sidenav"&gt;
+                                &lt;li&gt;
+                                    &lt;a href="/dec-2021/structure-chaining"&gt;
+                                        Silk.NET Structure Chaining
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
                                 &lt;li&gt;
                                     &lt;a href="/nov-2021/xamarin-deprecation"&gt;
                                         Silk.NET, .NET 6, and the Sunsetting of Xamarin Support
@@ -1771,6 +1796,11 @@ Onwards in another Blog Post, about Slots &amp;amp; VTables (the bit we ignored 
                             Blog
                         &lt;/a&gt;
                     &lt;ul class="nav ct-sidenav"&gt;
+                                &lt;li&gt;
+                                    &lt;a href="/dec-2021/structure-chaining"&gt;
+                                        Silk.NET Structure Chaining
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
                                 &lt;li class="active ct-sidenav-active"&gt;
                                     &lt;a href="/xamarin-deprecation"&gt;
                                         Silk.NET, .NET 6, and the Sunsetting of Xamarin Support
@@ -2069,6 +2099,11 @@ Note: This does not change the "experimental" status of our iOS support. We stil
                             Blog
                         &lt;/a&gt;
                     &lt;ul class="nav ct-sidenav"&gt;
+                                &lt;li&gt;
+                                    &lt;a href="/dec-2021/structure-chaining"&gt;
+                                        Silk.NET Structure Chaining
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
                                 &lt;li&gt;
                                     &lt;a href="/nov-2021/xamarin-deprecation"&gt;
                                         Silk.NET, .NET 6, and the Sunsetting of Xamarin Support
@@ -2415,6 +2450,11 @@ GlfwInput.RegisterPlatform();
                             Blog
                         &lt;/a&gt;
                     &lt;ul class="nav ct-sidenav"&gt;
+                                &lt;li&gt;
+                                    &lt;a href="/dec-2021/structure-chaining"&gt;
+                                        Silk.NET Structure Chaining
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
                                 &lt;li&gt;
                                     &lt;a href="/nov-2021/xamarin-deprecation"&gt;
                                         Silk.NET, .NET 6, and the Sunsetting of Xamarin Support
@@ -2855,6 +2895,11 @@ GlfwInput.RegisterPlatform();
                         &lt;/a&gt;
                     &lt;ul class="nav ct-sidenav"&gt;
                                 &lt;li&gt;
+                                    &lt;a href="/dec-2021/structure-chaining"&gt;
+                                        Silk.NET Structure Chaining
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
                                     &lt;a href="/nov-2021/xamarin-deprecation"&gt;
                                         Silk.NET, .NET 6, and the Sunsetting of Xamarin Support
                                     &lt;/a&gt;
@@ -2948,6 +2993,334 @@ The goal behind this is to make Silk.NET as independent as possible such that th
 &lt;h2 id="silk-net-3-0"&gt;Silk.NET 3.0&lt;/h2&gt;
 &lt;p&gt;Soon we'll be kicking off the next major release for Silk.NET: 3.0! Silk.NET 3.0 is still in heavy planning at the moment, so we'll be announcing more stuff as we solidify our plans, but like the ever evolving .NET ecosystem, this will be a massively innovative update exclusively adopting the .NET 6 platform on both desktop and mobile, as well as including a major set of rewrites across the SilkTouch platform!&lt;/p&gt;
 &lt;p&gt;We can't wait to show you what we have in store for the next stage of Silk.NET, and we hope you're as excited for this journey as we are! If you have any questions, talk to us in our Discord server or open a GitHub Discussion.&lt;/p&gt;
+
+
+    &lt;hr class="silk-last-hr"&gt;
+    &lt;div&gt;
+      &lt;div class="col-md-6"&gt;
+        &lt;div class="copyright"&gt;
+            © 2021
+                &lt;a href="https://dotnetfoundation.org" target="_blank"&gt;.NET Foundation and Contributors&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container-fluid"&gt;
+        &lt;p class="silk-disclaimer"&gt;
+            &lt;small&gt;Khronos®, Vulkan® are registered trademarks, and OpenXR™ is a trademark of The Khronos Group Inc. and is registered as a trademark in China, the European Union, Japan and the United Kingdom. OpenCL™, OpenGL®, and the OpenGL ES™ logos are registered trademarks or trademarks used under license by Khronos. Microsoft® and DirectX® are registered trademarks of Microsoft Corporation, used solely for identification. All other product names, trademarks, and/or company names are also used solely for identification and belong to their respective owners. Use of external images, trademarks, and/or resources are not endorsements, and no information in or regarding any of these external resources has been endorsed or approved by Silk.NET or the .NET Foundation.&lt;/small&gt;
+            &lt;br&gt;
+            &lt;br&gt;
+            &lt;small&gt;Powered by &lt;a href="https://statiq.dev"&gt;Statiq Framework&lt;/a&gt;&lt;/small&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+
+        &lt;/main&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;script src="../../theme/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script src="../../theme/popper.min.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script src="../../theme/bootstrap.min.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script async="" defer="" src="https://buttons.github.io/buttons.js"&gt;&lt;/script&gt;
+  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../../theme/argon.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script src="../../theme/clipboard.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../../theme/headroom.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../../theme/silk.js"&gt;&lt;/script&gt;
+
+
+</content>
+	</entry>
+	<entry>
+		<id>/blog/dec-2021/structure-chaining</id>
+		<title>Silk.NET Structure Chaining</title>
+		<link href="https://dotnet.github.io/blog/dec-2021/structure-chaining" />
+		<updated />
+		<content>
+
+
+
+
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  
+      &lt;title&gt;
+        Silk.NET Structure Chaining - Silk.NET
+      &lt;/title&gt;
+      &lt;meta property="og:title" content="Silk.NET Structure Chaining"&gt;
+      &lt;meta property="og:site_name" content="Silk.NET - High-Speed &amp;amp; Advanced .NET Graphics &amp;amp; Compute"&gt;
+
+          &lt;meta name="description" content="With the release of Silk.NET 2.11 we've enhanced the usability of Silk.NET.Vulkan by addressing one of its pain
+points, specifically building the Singly Linked Lists (or chains) of
+structures that are frequently used to pass information to, and from, the API."&gt;
+
+      &lt;meta property="og:type" content="article"&gt;
+
+      &lt;meta name="og:image" content="https://dotnet.github.io/Silk.NET/images/blog/dec-2021/structure-chaining.png"&gt;
+      &lt;meta name="og:image:alt" content="Blog Preview Image"&gt;
+      &lt;meta name="twitter:card" content="summary_large_image"&gt;
+
+  &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"&gt;
+  &lt;link href="../../theme/nucleo.css" rel="stylesheet"&gt;
+  &lt;link href="../../theme/fontawesome.css" rel="stylesheet"&gt;
+  &lt;link href="../../theme/argon.css" rel="stylesheet"&gt;
+  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/nord.min.css"&gt;
+  &lt;link rel="stylesheet" href="../../theme/silk.css"&gt;
+
+
+
+  
+  &lt;header class="header-global"&gt;
+        &lt;nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-horizontal navbar-dark navbar-silk-fixed"&gt;
+        
+
+&lt;div class="container-fluid"&gt;
+      &lt;a class="navbar-brand silk-dark-only" href="/"&gt;
+        &lt;img src="/images/wordmarkw.svg"&gt;
+      &lt;/a&gt;
+      &lt;a class="navbar-brand silk-light-only" href="/"&gt;
+        &lt;img src="/images/wordmark.svg"&gt;
+      &lt;/a&gt;
+  &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation"&gt;
+    &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;div class="navbar-collapse collapse" id="navbar_global"&gt;
+    &lt;div class="navbar-collapse-header"&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-6 collapse-brand"&gt;
+              &lt;a href="/"&gt;
+                &lt;img src="/images/wordmark.svg"&gt;
+              &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="col-6 collapse-close"&gt;
+          &lt;button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation"&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ul class="navbar-nav navbar-nav-hover align-items-lg-center"&gt;
+              &lt;li class="nav-item dropdown"&gt;
+                &lt;a href="/docs" class="nav-link" data-toggle="dropdown" role="button"&gt;
+                  &lt;i class="ni ni-bold-right d-lg-none"&gt;&lt;/i&gt;
+                  &lt;span class="nav-link-inner--text"&gt;Documentation&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;div class="dropdown-menu dropdown-menu-xl"&gt;
+                  &lt;div class="dropdown-menu-inner"&gt;
+                            &lt;a href="/docs/opengl" class="media d-flex align-items-center"&gt;
+                              &lt;div class="icon icon-shape bg-gradient-primary rounded-circle text-white"&gt;
+                                &lt;i class="ni ni-spaceship"&gt;&lt;/i&gt;
+                              &lt;/div&gt;
+                              &lt;div class="media-body ml-3"&gt;
+                                &lt;h6 class="heading text-primary mb-md-1"&gt;Getting Started with Silk.NET &amp;amp; OpenGL&lt;/h6&gt;
+                                &lt;p class="description d-none d-md-inline-block mb-0"&gt;Learn how to use Silk.NET for making basic cross-platform games and applications powered by OpenGL.&lt;/p&gt;
+                              &lt;/div&gt;
+                            &lt;/a&gt;
+                            &lt;a href="/docs/hlu" class="media d-flex align-items-center"&gt;
+                              &lt;div class="icon icon-shape bg-gradient-warning rounded-circle text-white"&gt;
+                                &lt;i class="ni ni-ui-04"&gt;&lt;/i&gt;
+                              &lt;/div&gt;
+                              &lt;div class="media-body ml-3"&gt;
+                                &lt;h6 class="heading text-warning mb-md-1"&gt;Silk.NET Windowing &amp;amp; Input Superbible&lt;/h6&gt;
+                                &lt;p class="description d-none d-md-inline-block mb-0"&gt;The ultimate guide to using Silk.NET's high-level cross-platform utilities.&lt;/p&gt;
+                              &lt;/div&gt;
+                            &lt;/a&gt;
+                            &lt;a href="/docs/silk.net" class="media d-flex align-items-center"&gt;
+                              &lt;div class="icon icon-shape bg-gradient-danger rounded-circle text-white"&gt;
+                                &lt;i class="ni ni-delivery-fast"&gt;&lt;/i&gt;
+                              &lt;/div&gt;
+                              &lt;div class="media-body ml-3"&gt;
+                                &lt;h6 class="heading text-danger mb-md-1"&gt;Tips &amp;amp; Tricks&lt;/h6&gt;
+                                &lt;p class="description d-none d-md-inline-block mb-0"&gt;Miscellaneous further documentation for getting the most out of your Silk.NET applications.&lt;/p&gt;
+                              &lt;/div&gt;
+                            &lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/li&gt;
+              &lt;li class="nav-item"&gt;
+                &lt;a href="/docs/silk.net/faq" class="nav-link"&gt;
+                  &lt;i class="ni ni-bold-right d-lg-none"&gt;&lt;/i&gt;
+                  &lt;span class="nav-link-inner--text"&gt;FAQ&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class="nav-item"&gt;
+                &lt;a href="/" class="nav-link"&gt;
+                  &lt;i class="ni ni-bold-right d-lg-none"&gt;&lt;/i&gt;
+                  &lt;span class="nav-link-inner--text"&gt;Blog&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class="navbar-nav align-items-lg-center ml-lg-auto"&gt;
+      &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link nav-link-icon silk-dark-only" id="lighton" href="/#" data-toggle="tooltip" title="Toggle Light Mode"&gt;
+          &lt;i class="fa fa-sun"&gt;&lt;/i&gt;
+          &lt;span class="nav-link-inner--text d-lg-none"&gt;Toggle Light Mode&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a class="nav-link nav-link-icon silk-light-only" id="lightoff" href="/#" data-toggle="tooltip" title="Toggle Dark Mode"&gt;
+          &lt;i class="fa fa-moon"&gt;&lt;/i&gt;
+          &lt;span class="nav-link-inner--text d-lg-none"&gt;Toggle Dark Mode&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+          &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link nav-link-icon" href="https://discord.gg/DTHHXRt" target="_blank" data-toggle="tooltip" title="Chat to us on Discord"&gt;
+              &lt;i class="fab fa-discord"&gt;&lt;/i&gt;
+              &lt;span class="nav-link-inner--text d-lg-none"&gt;Discord&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link nav-link-icon" href="" target="_blank" data-toggle="tooltip" title="Star us on Github"&gt;
+              &lt;i class="fab fa-github"&gt;&lt;/i&gt;
+              &lt;span class="nav-link-inner--text d-lg-none"&gt;GitHub&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="nav-item d-none d-lg-block ml-lg-4 silk-nav-btn"&gt;
+
+            &lt;a href="/docs" target="_blank" class="btn btn-outline-primary"&gt;
+              &lt;span class="nav-link-inner--text"&gt;Getting Started&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt; 
+        &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;div class="container-fluid"&gt;
+    &lt;div class="row flex-xl-nowrap"&gt;
+        &lt;!-- Sidenav --&gt;
+                &lt;div class="col-12 col-md-3 col-xl-2 ct-sidebar"&gt;
+            &lt;nav class="collapse ct-links" id="ct-docs-nav"&gt;
+                &lt;div class="ct-toc-item active"&gt;
+                        &lt;a class="ct-toc-link" href="/"&gt;
+                            Blog
+                        &lt;/a&gt;
+                    &lt;ul class="nav ct-sidenav"&gt;
+                                &lt;li class="active ct-sidenav-active"&gt;
+                                    &lt;a href="/structure-chaining"&gt;
+                                        Silk.NET Structure Chaining
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href="/nov-2021/xamarin-deprecation"&gt;
+                                        Silk.NET, .NET 6, and the Sunsetting of Xamarin Support
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href="/mar-2021/dotnetfoundation"&gt;
+                                        .NET Foundation &amp;amp; The next stage for Silk.NET
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href="/feb-2021/buildtools"&gt;
+                                        Generating an entire library: An introduction to BuildTools
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href="/jan-2021/silk20"&gt;
+                                        Announcing Silk.NET 2.0: The Largest Update To Date
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href="/dec-2020/silk20pre5"&gt;
+                                        Silk.NET 2.0 Preview 5: The Final Preview
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href="/dec-2020/silk20pre4"&gt;
+                                        Go live with Silk.NET 2.0 Preview 4
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href="/nov-2020/silktouch-slots-vtables"&gt;
+                                        SilkTouch: Slots &amp;amp; VTables
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href="/nov-2020/silktouch-invokes-marshalling"&gt;
+                                        SilkTouch: Invokes &amp;amp; Marshalling
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href="/nov-2020/silk20pre3"&gt;
+                                        Announcing Silk.NET 2.0 Preview 3
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+
+        
+        &lt;!-- Content Navigation--&gt;
+        &lt;div class="d-none d-xl-block col-xl-2 ct-toc"&gt;
+            &lt;ul class="section-nav"&gt;&lt;li class="toc-entry toc-h1"&gt;&lt;a href="/#silk-net-structure-chaining"&gt;Silk.NET Structure Chaining&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 silk-content silk-blog" role="main"&gt;
+                &lt;nav aria-label="breadcrumb"&gt;
+                    &lt;ol class="breadcrumb"&gt;
+                            &lt;li class="breadcrumb-item"&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                            &lt;li class="breadcrumb-item"&gt;&lt;a href="/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+
+                        &lt;li class="breadcrumb-item active" aria-current="page"&gt;Silk.NET Structure Chaining&lt;/li&gt;
+                        &lt;li class="ml-auto silk-sidebar-activator"&gt;&lt;a data-toggle="collapse" href="/#ct-docs-nav" role="button" aria-expanded="false" aria-controls="ct-docs-nav"&gt;&lt;i class="fa fa-bars"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ol&gt;
+                &lt;/nav&gt;
+
+            &lt;!-- Content --&gt;
+            
+
+
+    &lt;div class="alert alert-danger" role="alert"&gt;
+        This site is a work in progress!
+    &lt;/div&gt;
+
+&lt;h1 id="silk-net-structure-chaining"&gt;Silk.NET Structure Chaining&lt;/h1&gt;
+&lt;p&gt;With the release of Silk.NET 2.11 we've enhanced the usability of &lt;code&gt;Silk.NET.Vulkan&lt;/code&gt; by addressing one of its pain
+points, specifically building the &lt;a href="https://en.wikipedia.org/wiki/Linked_list"&gt;Singly Linked Lists&lt;/a&gt; (or chains) of
+structures that are frequently used to pass information to, and from, the API.&lt;/p&gt;
+&lt;p&gt;Up until now, it was not unusual to have to write quite a lot of unsafe code to work with the Vulkan API. For example, to
+query device features you would need to create a chain of empty structures to be populated by the API:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;var accelerationStructureFeaturesKhr = new PhysicalDeviceAccelerationStructureFeaturesKHR
+    {SType = StructureType.PhysicalDeviceAccelerationStructureFeaturesKhr};
+var indexingFeatures = new PhysicalDeviceDescriptorIndexingFeatures
+{
+    SType = StructureType.PhysicalDeviceDescriptorIndexingFeatures,
+    PNext = &amp;amp;accelerationStructureFeaturesKhr
+};
+var features2 = new PhysicalDeviceFeatures2
+{
+    SType = StructureType.PhysicalDeviceFeatures2,
+    PNext = &amp;amp;indexingFeatures
+};
+vk.GetPhysicalDeviceFeatures2(device, &amp;amp;features2);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Not only is this quite a bit of boiler plate (and it gets worse when you actually want to pass data to the API), it is
+really easy for developers, who are not always comfortable with &lt;code&gt;unsafe&lt;/code&gt; code, memory management and pointers, to
+introduce subtle bugs by passing in pointers to structures they have previously generated and are now residing on the
+.NET heap. Such structures can be moved by the Garbage Collector at the most unexpected times!&lt;/p&gt;
+&lt;p&gt;Thanks to Structure Chaining, we now have 2 new ways to write the above code. The most
+useful &lt;a href="https://github.com/dotnet/Silk.NET/blob/main/documentation/structure-chaining/managed-chaining.md"&gt;Managed Chaining&lt;/a&gt;,
+makes it much easier, &lt;em&gt;and safer&lt;/em&gt;, to work with Vulkan Structure Chains. For example, the above code can now be written
+as:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;using var features2 = Chain.Create&amp;lt;PhysicalDeviceFeatures2, PhysicalDeviceDescriptorIndexingFeatures,
+    PhysicalDeviceAccelerationStructureFeaturesKHR&amp;gt;();
+vk.GetPhysicalDeviceFeatures2(device, features2);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The new &lt;code&gt;Chain&lt;/code&gt; classes manage the lifetime of the structures for you and they can be safely stored on the
+heap, like any object. They also efficiently handle the &lt;code&gt;SType&lt;/code&gt; and &lt;code&gt;PNext&lt;/code&gt; fields, ensuring they are always correct. It is
+also easy to modify and manipulate the chains. What is less obvious from the above example is that we are now able to
+validate that &lt;code&gt;PhysicalDeviceFeatures2&lt;/code&gt; can be used as the &lt;em&gt;start&lt;/em&gt; of a chain, and that
+both &lt;code&gt;PhysicalDeviceDescriptorIndexingFeatures&lt;/code&gt; and &lt;code&gt;PhysicalDeviceAccelerationStructureFeaturesKHR&lt;/code&gt; are valid
+structures to appear in such a chain. That validation occurs at compile time, meaning that most modern IDEs will give
+you error 'squiggles' as soon as you try and use an invalid structure (according to the Vulkan Specification)!&lt;/p&gt;
+&lt;p&gt;That 'magic' is possible due to a set of new interfaces we've added to Vulkan Structures to indicate when they can be
+used in chains, and, when the Vulkan Specification explicitly states it, what chains they can be used in. All without
+effecting runtime performance.&lt;/p&gt;
+&lt;p&gt;Full documentation is
+available &lt;a href="https://github.com/dotnet/Silk.NET/blob/main/documentation/structure-chaining/overview.md"&gt;here&lt;/a&gt;, and we
+can't wait for you to start using the new features!  If they prove popular, we plan on expanding the functionality to
+other APIs supported by Silk.NET.&lt;/p&gt;
 
 
     &lt;hr class="silk-last-hr"&gt;
